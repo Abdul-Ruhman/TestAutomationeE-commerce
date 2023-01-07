@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="62.675">
+<testcase classname="User could register with valid data" name="register a new account" time="19.747">
+<system-out><![CDATA[Given user open the browser and website.....................................passed
+And user navigate to register page..........................................passed
+When select gender, fill firstname and lastname.............................passed
+And choose birthdate day, month, year.......................................passed
+And insert email, password and confirm password.............................passed
+And click on register button................................................passed
+Then successful register message appears....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User log in with valid email and password" name="login with valid email and password" time="22.313">
+<system-out><![CDATA[Given user open browser.....................................................passed
+And user navigate to login page.............................................passed
+When user enter valid email and password....................................passed
+Then user click on login button.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User reset his/her password successfully" name="reset password" time="20.081">
+<system-out><![CDATA[Given user open browser and website.........................................passed
+And navigate to login page..................................................passed
+When click on forget password...............................................passed
+And insert email............................................................passed
+And click on recover button.................................................passed
+Then confirm send to mail message appears...................................passed
+]]></system-out>
+</testcase>
+</testsuite>
