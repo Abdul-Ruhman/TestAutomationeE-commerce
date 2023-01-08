@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="TestAutomationE-commerce" />
         <module name="TestAutomationE-Commerece" />
+        <module name="TestAutomationE-Commerce" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="0.568">
+<testcase classname="User could register with valid data" name="register a new account" time="0.011">
+<system-out><![CDATA[When user navigate to register page.........................................passed
+And select gender, fill firstname and lastname..............................passed
+And choose birthdate day, month, year.......................................passed
+And insert email, password and confirm password.............................passed
+And click on register button................................................passed
+Then successful register message appears....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User log in with valid email and password" name="login with valid email and password" time="0.007">
+<system-out><![CDATA[And user navigate to login page.............................................passed
+When user enter valid email and password....................................passed
+Then user click on login button.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User reset his/her password successfully" name="reset password" time="0.002">
+<system-out><![CDATA[When navigate to login page.................................................passed
+And click on forget password................................................passed
+And insert email............................................................passed
+And click on recover button.................................................passed
+Then confirm send to mail message appears...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User search for any product" name="search for a product" time="0.002">
+<system-out><![CDATA[When write product in search box............................................passed
+Then click search button....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User switch between currencies US-Euro" name="switch between US Dollar and Euro" time="0.001">
+<system-out><![CDATA[When click on currency drop-list and choose Euro............................passed
+Then click on currency drop-list and choose US Dollar.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="User select different Categories" name="select categorise" time="0.002">
+<system-out><![CDATA[When click on selected categorise...........................................passed
+Then selected categorise page will open.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User filter by color" name="select specific categorise" time="0.001">
+<system-out><![CDATA[When hover on Apparel and click on Shoes....................................passed
+Then filter by color........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User select different tags in product page" name="select different tags in categorise page" time="0.002">
+<system-out><![CDATA[When click on selected categorise "Digital downloads".......................passed
+Then click on "awesome" tag.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User add different products to Shopping cart" name="add product to cart" time="0.002">
+<system-out><![CDATA[When clicking on selected categorise........................................passed
+And clicking on selected product............................................passed
+Then click on add to cart to selected product...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User add different products to Wishlist" name="add product to wishlist" time="0.001">
+<system-out><![CDATA[When click on chosen categorise.............................................passed
+And click on chosen product.................................................passed
+Then click on add to wishlist icon to selected product......................passed
+]]></system-out>
+</testcase>
+<testcase classname="User add different products to compare list" name="add product to compare list" time="0.001">
+<system-out><![CDATA[When click on specific categorise...........................................passed
+And click on specific product...............................................passed
+Then click on add to compare list icon to selected product..................passed
+]]></system-out>
+</testcase>
+<testcase classname="User create a successful Order" name="create a successful Order" time="0.001">
+<system-out><![CDATA[When choose and click on selected categorise................................passed
+And choose and click on selected product....................................passed
+And choose and click on add to cart to selected product.....................passed
+And click on shopping cart upper page.......................................passed
+And click on checkbox to agree terms........................................passed
+Then click on checkout button...............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

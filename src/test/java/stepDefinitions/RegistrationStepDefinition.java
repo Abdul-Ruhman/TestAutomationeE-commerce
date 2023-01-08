@@ -1,61 +1,48 @@
 package stepDefinitions;
 
-import Pages.ClickChoose;
-import Pages.InsertData;
-import org.openqa.selenium.WebDriver;
+import static HooksPkg.Hooks.driver;
+import HooksPkg.Hooks;
+import Pages.MainPage;
+import Pages.RegistrationPage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class RegistrationStepDefinition {
-    static WebDriver driver=null ;
 
-    @Given("user open the browser and website")
-    public static void openBrowser() throws InterruptedException {
-
-        // Navigate to E-Commerce Website
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://demo.nopcommerce.com/");
-    }
-    @And("user navigate to register page")
-    public static void navigateToRegisterPage() throws InterruptedException {
-        Thread.sleep(5000);
-        ClickChoose.resister(driver).click();
-        Thread.sleep(4000);
+    @When("user navigate to register page")
+    public static void navigateToRegisterPage() {
+        MainPage.resister(driver).click();
     }
 
 
-    @When("select gender, fill firstname and lastname")
-    public static void fillGenderFNLS() throws InterruptedException {
-        ClickChoose.gender(driver).click();
-        InsertData.insertFrstName(driver).sendKeys("Abdulrahman");
-        InsertData.insertLasName(driver).sendKeys("Amer");
+    @And("select gender, fill firstname and lastname")
+    public static void fillGenderFNLS(){
+        RegistrationPage.gender(driver).click();
+        RegistrationPage.insertFrstName(driver).sendKeys("Abdulrahman");
+        RegistrationPage.insertLasName(driver).sendKeys("Amer");
     }
 
     @And("choose birthdate day, month, year")
     public static void chooseBirthDate() {
-        ClickChoose.dayDropDown(driver);
-        ClickChoose.monthDropDown(driver);
-        ClickChoose.yearDropDown(driver);
+        RegistrationPage.dayDropDown(driver);
+        RegistrationPage.monthDropDown(driver);
+        RegistrationPage.yearDropDown(driver);
     }
 
     @And("insert email, password and confirm password")
     public static void insertEmailPwConPw(){
-        InsertData.email(driver).sendKeys("testeng10@outlook.com");
-        InsertData.insertPwd(driver).sendKeys("Ab@94#22");
-        InsertData.insertPwdConf(driver).sendKeys("Ab@94#22");
+        RegistrationPage.email(driver).sendKeys("testeng10@outlook.com");
+        RegistrationPage.insertPwd(driver).sendKeys("Ab@94#22");
+        RegistrationPage.insertPwdConf(driver).sendKeys("Ab@94#22");
     }
 
     @And("click on register button")
     public static void clickRegButton(){
-        ClickChoose.clickReg(driver).click();
+        RegistrationPage.clickReg(driver).click();
     }
 
     @Then("successful register message appears")
@@ -67,6 +54,5 @@ public class RegistrationStepDefinition {
 
         Assert.assertEquals(expectedResult, actualResult);
     }
-
 
 }
