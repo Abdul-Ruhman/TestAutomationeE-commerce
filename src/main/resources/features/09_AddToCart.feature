@@ -1,3 +1,5 @@
+@SmokeTest
+
 Feature: User add different products to Shopping cart
   Scenario: add product to cart
       When clicking on selected categorise

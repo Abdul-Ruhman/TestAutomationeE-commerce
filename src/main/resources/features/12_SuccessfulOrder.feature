@@ -1,3 +1,5 @@
+@SmokeTest
+
 Feature: User create a successful Order
   Scenario: create a successful Order
       When choose and click on selected categorise

@@ -1,3 +1,5 @@
+@SmokeTest
+
 Feature: User could register with valid data
   Scenario: register a new account
       When user navigate to register page

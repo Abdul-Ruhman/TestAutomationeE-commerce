@@ -1,3 +1,5 @@
+@SmokeTest
+
 Feature: User reset his/her password successfully
   Scenario: reset password
       When  navigate to login page

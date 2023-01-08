@@ -1,3 +1,5 @@
+@SmokeTest
+
 Feature: User add different products to compare list
   Scenario: add product to compare list
     When click on specific categorise
