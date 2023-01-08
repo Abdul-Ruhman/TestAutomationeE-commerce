@@ -12,7 +12,6 @@ public class FilterByColorStepDef {
     @When("hover on Apparel and click on Shoes")
     public static void clickCategorise() throws InterruptedException {
         MainPage.hoverClickShoesProduct(driver);
-        Thread.sleep(6000);
     }
 
     @Then("filter by color")

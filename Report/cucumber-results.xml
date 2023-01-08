@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="0.568">
-<testcase classname="User could register with valid data" name="register a new account" time="0.011">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="0.518">
+<testcase classname="User could register with valid data" name="register a new account" time="0.013">
 <system-out><![CDATA[When user navigate to register page.........................................passed
 And select gender, fill firstname and lastname..............................passed
 And choose birthdate day, month, year.......................................passed
@@ -23,12 +23,12 @@ And click on recover button.................................................pass
 Then confirm send to mail message appears...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User search for any product" name="search for a product" time="0.002">
+<testcase classname="User search for any product" name="search for a product" time="0.003">
 <system-out><![CDATA[When write product in search box............................................passed
 Then click search button....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User switch between currencies US-Euro" name="switch between US Dollar and Euro" time="0.001">
+<testcase classname="User switch between currencies US-Euro" name="switch between US Dollar and Euro" time="0.002">
 <system-out><![CDATA[When click on currency drop-list and choose Euro............................passed
 Then click on currency drop-list and choose US Dollar.......................passed
 ]]></system-out>

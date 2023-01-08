@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -65,9 +66,19 @@ public class MainPage {
     public static void hoverClickShoesProduct(WebDriver driver) throws InterruptedException {
 
 
-        WebElement mainMenu = driver.findElement(By.xpath("/html/body/div[6]/div[2]/ul[1]/li[3]/a"));
         Actions mouseHover = new Actions(driver);
-        mouseHover.moveToElement(mainMenu);
-        mouseHover.moveToElement(driver.findElement(By.xpath("/html/body/div[6]/div[2]/ul[1]/li[3]/ul/li[1]/a"))).click();
+        WebElement mainCat = driver.findElement(By.xpath("//div[6]/div[2]/ul[1]/li[3]/a[@href='/apparel']"));
+        mouseHover.moveToElement(mainCat).build().perform();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[6]/div[2]/ul[1]/li[3]/ul/li[1]/a[@href='/shoes']")));
+
+        WebElement subCat = driver.findElement(By.xpath("//div[6]/div[2]/ul[1]/li[3]/ul/li[1]/a[@href='/shoes']"));
+        mouseHover.moveToElement(subCat);
+
+        mouseHover.click().build().perform();
+
+        System.out.println(driver.getCurrentUrl());
+
     }
 }
